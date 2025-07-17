@@ -10,7 +10,7 @@ Feature: Main Feature
         Then selecciono la opcion de registarme como usuario
         And me registro como usuario con los siguientes datos:
             | Nombre  | Apellido | Email                | Telefono | Direccion | Ciudad | CodigoPostal | Pais | Region |
-            | Juan    | Perez    | previredPrueba157@gmail.com     | 123456789 | Calle Falsa 123 | Santiago | 12345 | Chile | Region Metropolitana |
+            | Juan    | Perez    | Prueba157@gmail.com     | 123456789 | Calle Falsa 123 | Santiago | 12345 | Chile | Region Metropolitana |
         And ingreso mi contrasena y la confirmo "contrasena123"
         Then acepto los terminos y condiciones
         Then confirmo el registro
