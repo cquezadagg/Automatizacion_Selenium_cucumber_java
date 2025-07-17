@@ -12,7 +12,7 @@ import org.apache.commons.exec.OS;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -47,20 +47,21 @@ public class MainSteps {
         extent = ExtentReportManager.getInstance();
     }
 
-    @Before
-    public void beforeScenario(Scenario scenario) {
-        scenarioTest = extent.createTest(scenario.getName());
+@Before
+public void beforeScenario(Scenario scenario) {
+    scenarioTest = extent.createTest(scenario.getName());
 
-        if (driver == null) {
-            if (OS.isName("Windows")) {
-                System.setProperty("webdriver.edge.driver", "src/test/resources/driver/msedgedriver.exe");
-            } else if (OS.isName("Linux")) {
-                System.setProperty("webdriver.edge.driver", "src/test/resources/driver/msedgedriver");
-            }
-            driver = new EdgeDriver();
-            driver.manage().window().maximize();
+    if (driver == null) {
+        if (OS.isName("Windows")) {
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
+        } else if (OS.isName("Linux")) {
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver");
         }
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
+}
+
 
  @AfterStep
 public void afterStep(Scenario scenario) {
