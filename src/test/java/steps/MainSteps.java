@@ -227,7 +227,7 @@ public void afterStep(Scenario scenario) {
     public void validoQueElDespachoYCostoSea() throws InterruptedException {
         WebElement costoEnvio = driver.findElement(By.xpath("//label[contains(normalize-space(string(.)), '" + "Flat Shipping Rate - $5.00"+ "')]"));
         if (costoEnvio.isDisplayed()) {
-            scenarioTest.pass("  El costo de envío es correcto");
+            scenarioTest.pass("  El costo de envío es esta bien");
         } else {
             scenarioTest.warning("  El costo de envío no es correcto");
         }
