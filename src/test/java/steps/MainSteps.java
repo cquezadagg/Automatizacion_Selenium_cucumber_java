@@ -59,7 +59,7 @@ public class MainSteps {
                 System.setProperty("webdriver.edge.driver", "src/test/resources/driver/msedgedriver");
             }
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless=new");
+// options.addArguments("--headless=new");
 options.addArguments("--no-sandbox");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-gpu");

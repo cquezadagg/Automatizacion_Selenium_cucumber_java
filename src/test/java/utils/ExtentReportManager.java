@@ -11,8 +11,7 @@ public class ExtentReportManager {
             ExtentSparkReporter spark = new ExtentSparkReporter("results/TestReport.html");
             extent = new ExtentReports();
             extent.attachReporter(spark);
-            extent.setSystemInfo("Project", "Desafío QA Previred");
-            extent.setSystemInfo("Postulante", "Carlos Quezada");
+            extent.setSystemInfo("Project", "Automatizacion de pruebas con java selenium ");
         }
         return extent;
     }

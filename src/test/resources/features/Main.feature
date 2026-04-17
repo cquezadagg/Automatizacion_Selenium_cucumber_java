@@ -42,7 +42,8 @@ Feature: Main Feature
         And valido los datos de pago vs los ingresados en mi cuenta
         Then cierro la sesion
 
-    # # Esta seccion corresponde a los puntos extras
+
+    @Comparacion
     Scenario: Comparacion de productos
          Given entro a la url de la tienda 
          When busco el producto 'Apple Cinema 30"' y lo agrego a comparacion

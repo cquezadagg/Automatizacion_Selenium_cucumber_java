@@ -9,7 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = "steps",
-    plugin = {"pretty"}
+    plugin = {"pretty"},
+    tags = "@Comparacion"
 )
 public class TestRunner {
 }
